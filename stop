@@ -3,7 +3,7 @@
 source ./service_cli
 
 if [[ "$1" == "mm2" ]]; then
-  docker compose stop mm2
+  podman compose stop mm2
 elif [[ -z ${1-} ]]; then
   for key in "${!service_cli[@]}"; do
     echo "stopping $key"
@@ -11,10 +11,10 @@ elif [[ -z ${1-} ]]; then
   done
   echo "sleeping 30 seconds"
   sleep 30
-  docker compose stop
+  podman compose stop
 else
   ${service_cli[$1]} stop
   echo "sleeping 30 seconds"
   sleep 30
-  docker compose stop $1
+  podman compose stop $1
 fi

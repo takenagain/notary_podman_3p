@@ -1,4 +1,4 @@
-FROM komodoofficial/komodo:cd_release_956650e_dev
+FROM docker.io/komodoofficial/komodo:cd_release_956650e_dev
 LABEL maintainer="smk@komodoplatform.com"
 
 # Setup up user and working directory

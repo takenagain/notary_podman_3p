@@ -139,7 +139,7 @@ def create_cli_wrappers():
             wrapper = f"cli_wrappers/{cli}"
         with open(wrapper, 'w') as conf:
             conf.write('#!/bin/bash\n')
-            conf.write(f'docker exec {coin.lower()} {get_cli_command(coin, True)} "$@"\n')
+            conf.write(f'podman exec {coin.lower()} {get_cli_command(coin, True)} "$@"\n')
             os.chmod(wrapper, 0o755)
 
 

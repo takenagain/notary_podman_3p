@@ -2,4 +2,4 @@
 
 echo "Don't forget to stop containers before purging them!"
 echo "Otherwise you can run this while containers are active to clean everything else."
-docker system prune -a --volumes
+podman system prune -a --volumes
